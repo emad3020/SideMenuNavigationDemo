@@ -11,37 +11,64 @@ import Localize_Swift
 
 
 class SideMenuVC: BaseViewController {
+  
+  @IBOutlet weak var tableView: UITableView!
+    
+  private lazy var dataSource = SideMenuDataSource()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    configureTableView()
+    
+    reloadTableViewData()
+  }
+    
+  func changeLanguage() {
+    sideMenuController?.hideMenu()
+    
+    let newLanguage = Localize.currentLanguage() == "ar" ? "en" : "ar"
+    Localize.setCurrentLanguage(newLanguage)
+    
+    (UIApplication.shared.delegate as? AppDelegate)?.configureRootViewController()
+  }
+  
+  
+}
 
-    @IBOutlet weak var changeLanguageButton: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+// MARK: - Configure View
 
-        self.setText()
+private extension SideMenuVC {
+  
+  func configureTableView() {
+    tableView.delegate = self
+    tableView.dataSource = dataSource
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
+    tableView.tableFooterView = UIView()
+  }
+  
+  func reloadTableViewData() {
+    dataSource.reloadSections()
+  }
+  
+}
+
+// MARK: - Configure UITableViewDelegate
+
+extension SideMenuVC: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    tableView.deselectRow(at: indexPath, animated: true)
+    
+    switch dataSource.rows[indexPath.row].type {
+    case .changeLanguage:
+      changeLanguage()
+      
+    default:
+      break
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        NotificationCenter.default
-        .addObserver(self, selector: #selector(setText), name: Notification.Name(LCLLanguageChangeNotification),
-                     object: nil)
-    }
-    
-
-    @IBAction func changeLanguageButtonPressed(_ sender : Any) {
-        sideMenuController?.hideMenu()
-        
-         let newLanguage = Localize.currentLanguage() == "ar" ? "en" : "ar"
-            Localize.setCurrentLanguage(newLanguage)
-        
-        (UIApplication.shared.delegate as? AppDelegate)?.configureRootViewController()
-    }
-    
-    
-    @objc func setText() {
-        
-        changeLanguageButton.setTitle("changeLanguage".localized(), for: .normal) 
-    }
-    
-    
-
+  }
+  
 }

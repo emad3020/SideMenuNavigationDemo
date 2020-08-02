@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E1AD8F24D759FB00F49092 /* SideMenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1AD8E24D759FB00F49092 /* SideMenuDataSource.swift */; };
 		934AC53624D60E1B00E4360C /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934AC53524D60E1B00E4360C /* SideMenuVC.swift */; };
 		934AC54124D617DA00E4360C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 934AC54324D617DA00E4360C /* Localizable.strings */; };
 		934AC54624D6224200E4360C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937B626A24D5F7A400A75C40 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E1AD8E24D759FB00F49092 /* SideMenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuDataSource.swift; sourceTree = "<group>"; };
 		744E0C1CB201B26AAA43A628 /* Pods_SideMenuDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SideMenuDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F19BE7CF84FC07C5785BCEF /* Pods-SideMenuDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SideMenuDemoApp.release.xcconfig"; path = "Target Support Files/Pods-SideMenuDemoApp/Pods-SideMenuDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		825643956DF32D884BF543E4 /* Pods-SideMenuDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SideMenuDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SideMenuDemoApp/Pods-SideMenuDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				934AC53524D60E1B00E4360C /* SideMenuVC.swift */,
+				02E1AD8E24D759FB00F49092 /* SideMenuDataSource.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				937B626F24D5F7A400A75C40 /* ViewController.swift in Sources */,
 				9393169824D60B4700DE5129 /* BaseViewController.swift in Sources */,
+				02E1AD8F24D759FB00F49092 /* SideMenuDataSource.swift in Sources */,
 				934AC54624D6224200E4360C /* AppDelegate.swift in Sources */,
 				934AC53624D60E1B00E4360C /* SideMenuVC.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN3T5BKCFP;
 				INFOPLIST_FILE = SideMenuDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN3T5BKCFP;
 				INFOPLIST_FILE = SideMenuDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
