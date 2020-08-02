@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SideMenu" id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="92"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bRI-q6-PrM">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuContentVC" id="LLj-li-gDX" customClass="ViewController" customModule="SideMenuDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krj-Eb-QEB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0xz-GP-vKE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j3v-3F-wJl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zwe-qE-pdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092.753623188406" y="-145.3125"/>
+        </scene>
+        <!--Side MenuVC-->
+        <scene sceneID="ilx-mt-rIr">
+            <objects>
+                <viewController storyboardIdentifier="MenuNavigation" id="ccH-XQ-ENK" customClass="SideMenuVC" customModule="SideMenuDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zZg-JW-WmE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-qJ-CtG">
+                                <rect key="frame" x="114" y="44" width="300" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dXO-97-3bA">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="818"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-cover.gif" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-H9-HSC">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="KPo-Ee-hmr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jYe-I1-EsO">
+                                                <rect key="frame" x="0.0" y="160" width="300" height="658"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-hD-j0u">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                                        <state key="normal" title="Home"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alD-aZ-DHt">
+                                                        <rect key="frame" x="0.0" y="59" width="300" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                                        <state key="normal" title="Profile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m6-UO-7fJ">
+                                                        <rect key="frame" x="0.0" y="118" width="300" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                                        <state key="normal" title="Change Language"/>
+                                                        <connections>
+                                                            <action selector="changeLanguageButtonPressed:" destination="ccH-XQ-ENK" eventType="touchUpInside" id="XKz-87-lBH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yf-QC-wWz">
+                                                        <rect key="frame" x="0.0" y="177" width="300" height="481"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
+                                                        <state key="normal" title="Logout"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="dXO-97-3bA" firstAttribute="leading" secondItem="CLh-qJ-CtG" secondAttribute="leading" id="MYI-am-iEi"/>
+                                    <constraint firstAttribute="trailing" secondItem="dXO-97-3bA" secondAttribute="trailing" id="S01-Ye-YjY"/>
+                                    <constraint firstItem="dXO-97-3bA" firstAttribute="top" secondItem="CLh-qJ-CtG" secondAttribute="top" id="dUN-42-2Y4"/>
+                                    <constraint firstAttribute="bottom" secondItem="dXO-97-3bA" secondAttribute="bottom" id="s3L-ch-ghU"/>
+                                    <constraint firstAttribute="width" constant="300" id="tcs-1f-C9Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vlc-jv-cX7" firstAttribute="top" secondItem="CLh-qJ-CtG" secondAttribute="top" id="58b-jq-16B"/>
+                            <constraint firstItem="CLh-qJ-CtG" firstAttribute="trailing" secondItem="Vlc-jv-cX7" secondAttribute="trailing" id="Zu8-vT-hvt"/>
+                            <constraint firstItem="CLh-qJ-CtG" firstAttribute="bottom" secondItem="Vlc-jv-cX7" secondAttribute="bottom" id="z2d-i6-fBG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vlc-jv-cX7"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeLanguageButton" destination="4m6-UO-7fJ" id="QRW-ra-N17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTr-6h-eRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="570"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eZ3-5W-R7g">
+            <objects>
+                <navigationController storyboardIdentifier="ContentNavigation" automaticallyAdjustsScrollViewInsets="NO" id="JV9-Lu-tqq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BcB-7E-RZW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LLj-li-gDX" kind="relationship" relationship="rootViewController" id="hzc-SN-8Yy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKa-T3-fTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182.608695652174" y="-145.3125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default-cover.gif" width="1500" height="500"/>
+    </resources>
+</document>

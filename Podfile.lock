@@ -1,0 +1,20 @@
+PODS:
+  - Localize-Swift (2.0.0)
+  - SideMenuSwift (2.0.5)
+
+DEPENDENCIES:
+  - Localize-Swift
+  - SideMenuSwift
+
+SPEC REPOS:
+  trunk:
+    - Localize-Swift
+    - SideMenuSwift
+
+SPEC CHECKSUMS:
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
+
+PODFILE CHECKSUM: 361635dbedbe0d2bb528740c4d2b3c207efefe1d
+
+COCOAPODS: 1.8.4
