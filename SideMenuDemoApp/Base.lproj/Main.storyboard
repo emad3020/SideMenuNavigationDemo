@@ -70,6 +70,9 @@
                                                         <rect key="frame" x="0.0" y="59" width="300" height="39"/>
                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="23"/>
                                                         <state key="normal" title="Profile"/>
+                                                        <connections>
+                                                            <action selector="profileButtonPressed:" destination="ccH-XQ-ENK" eventType="touchUpInside" id="Oax-tD-P7B"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m6-UO-7fJ">
                                                         <rect key="frame" x="0.0" y="118" width="300" height="39"/>
@@ -115,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1183" y="570"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="eZ3-5W-R7g">
             <objects>
-                <navigationController storyboardIdentifier="ContentNavigation" automaticallyAdjustsScrollViewInsets="NO" id="JV9-Lu-tqq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ContentNavigation" automaticallyAdjustsScrollViewInsets="NO" id="JV9-Lu-tqq" customClass="BaseNavigationController" customModule="SideMenuDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BcB-7E-RZW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
