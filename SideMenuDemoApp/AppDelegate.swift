@@ -17,17 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        
         
         SideMenuController.preferences.basic.shouldRespectLanguageDirection = false
         
-        
          configureRootViewController()
         
-        
-        return true
+      return true
     }
 
     
