@@ -36,11 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
           window = UIWindow(frame: UIScreen.main.bounds)
-          
-          let menuViewController = mainStoryboard.instantiateViewController(identifier: "MenuNavigation")
-          
-          let contentViewController = mainStoryboard.instantiateViewController(identifier: "ContentNavigation")
+                    
+        let contentViewController = mainStoryboard.instantiateViewController(identifier: "ContentNavigation")
         
+        let menuViewController = mainStoryboard.instantiateViewController(identifier: "MenuNavigation") as! SideMenuVC
+        /// You should set navigation base with the actual navigation controller
+        menuViewController.navigationBase = (contentViewController as! BaseNavigationController)
+      
           window?.rootViewController = SideMenuController(contentViewController: contentViewController, menuViewController: menuViewController)
           window?.makeKeyAndVisible()
     }

@@ -8,32 +8,23 @@
 
 import UIKit
 import Localize_Swift
-
+import SideMenuSwift
 
 class SideMenuVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private weak var navigationBase : BaseNavigationController?
+  
+    public weak var navigationBase : BaseNavigationController?
+  
     private lazy var dataSource = SideMenuDataSource()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         configureTableView()
         reloadTableViewData()
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-        
-        navigationBase = storyboard?.instantiateViewController(identifier: "ContentNavigation")
-    }
-    
-    
-    
     
     @IBAction func changeLanguageButtonPressed(_ sender : Any) {
         sideMenuController?.hideMenu()
@@ -78,19 +69,19 @@ private extension SideMenuVC {
 }
 
 // MARK: - Configure UITableViewDelegate
-
+//
 extension SideMenuVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
         switch dataSource.rows[indexPath.row].type {
         case .changeLanguage:
             changeLanguage()
         case .profile:
             let profileVC = ProfileVC()
-            navigationBase?.pushViewController(profileVC, animated: true)
+            navigate(to: profileVC)
             
         default:
             break
@@ -98,4 +89,15 @@ extension SideMenuVC: UITableViewDelegate {
         
     }
     
+}
+
+// MARK: - Navigation Helpers
+//
+extension SideMenuVC {
+  
+  func navigate(to viewController: UIViewController) {
+    sideMenuController?.hideMenu()
+    navigationBase?.pushViewController(viewController, animated: true)
+  }
+  
 }
